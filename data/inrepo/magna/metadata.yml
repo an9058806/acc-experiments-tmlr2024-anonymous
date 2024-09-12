@@ -1,0 +1,10 @@
+name: magna
+graph_file: main.npz
+alignment_graphs_dir: low_confidence/
+file_info:
+  filetype: npz
+graph_info:
+  num_nodes: 1004
+  weights: False
+  directed: False
+  node_attributes: False

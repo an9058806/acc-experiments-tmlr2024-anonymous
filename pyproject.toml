@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "accnebtools"
+version = "0.0.1"
+authors = [
+  { name="XXXXX XXXXX", email="XXXXX@XXXXX" },
+]
+description = "A library for benchmarking unsupervised node embedding models."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: Unix",
+]
+
+[project.urls]
+Homepage = "https://github.com/XXXXX/acc-experiments-tmlr2024"
+Issues = "https://github.com/XXXXX/acc-experiments-tmlr2024/issues"

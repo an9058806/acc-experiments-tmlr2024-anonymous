@@ -1,0 +1,11 @@
+name: chameleon
+graph_file: chameleon.npz
+node_labels: multiclass
+node_labels_file: labels.json
+file_info:
+  filetype: npz
+graph_info:
+  num_nodes: 2277
+  weights: False
+  directed: True
+  node_attributes: True

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "structfeatures"
+version = "0.0.1"
+authors = [
+  { name="XXXXX XXXXX", email="XXXXX@XXXXX" },
+]
+description = "A library for computing degree and local clustering coefficient features from edge lists."
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/XXXXX/structfeatures"
+Issues = "https://github.com/XXXXX/structfeatures/issues"

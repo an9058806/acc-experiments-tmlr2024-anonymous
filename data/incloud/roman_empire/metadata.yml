@@ -1,0 +1,11 @@
+name: roman_empire
+graph_file: roman_empire.npz
+node_labels: multiclass
+node_labels_file: labels.json
+file_info:
+  filetype: npz
+graph_info:
+  num_nodes: 22662
+  weights: False
+  directed: True
+  node_attributes: True

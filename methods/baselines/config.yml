@@ -1,0 +1,545 @@
+methods:
+  bgrl:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 10000
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 1e-5
+        type: float
+        description: Learning rate.
+      wd:
+        default: 1e-5
+        type: float
+        description: Weight decay.
+      mm:
+        default: 0.99
+        type: float
+        description: Momentum
+      dfp1:
+        default: 0.25
+        type: float
+        description: feature drop out
+      dfp2:
+        default: 0.25
+        type: float
+        description: feature drop out
+      dep1:
+        default: 0.25
+        type: float
+        description: edge drop out
+      dep2:
+        default: 0.25
+        type: float
+        description: edge drop out
+      encoder:
+        default: 'gcn'
+        type: str
+        description: Which encoder to use.
+    alt_versions:
+      bgrl_gs:
+        encoder:
+          default: 'graphsage'
+  ccassg:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 100
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 1e-3
+        type: float
+        description: Learning rate.
+      wd:
+        default: 0.
+        type: float
+        description: Weight decay.
+      lambd:
+        default: 1e-3
+        type: float
+        description: Lambda loss parameter.
+      dfr:
+        default: 0.2
+        type: float
+        description: feature drop out ratio.
+      der:
+        default: 0.2
+        type: float
+        description: edge drop out ratio.
+      dep1:
+        default: 0.25
+        type: float
+        description: feature drop out 1.
+  graphmae:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 1000
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 1e-3
+        type: float
+        description: Learning rate.
+      wd:
+        default: 1e-4
+        type: float
+        description: Weight decay.
+      num_heads:
+        default: 4
+        type: int
+        description: Number of heads.
+      mask_rate:
+        default: 0.5
+        type: float
+        description: Mask ratio.
+      replace_rate:
+        default: 0.05
+        type: float
+        description: Replacement rate.
+      alpha_l:
+        default: 3
+        type: int
+        description: Loss exponent parameter.
+  graphmae2:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 1000
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 1e-3
+        type: float
+        description: Learning rate.
+      wd:
+        default: 1e-4
+        type: float
+        description: Weight decay.
+      num_heads:
+        default: 8
+        type: int
+        description: Number of heads.
+      mask_rate:
+        default: 0.5
+        type: float
+        description: Mask ratio.
+      replace_rate:
+        default: 0.05
+        type: float
+        description: Replacement rate.
+      alpha_l:
+        default: 3
+        type: int
+        description: Loss exponent parameter.
+      lam:
+        default: 1.0
+        type: float
+        description: Loss weighting parameter.
+      encoder:
+        default: 'gat'
+        type: str
+        description: Which encoder to use.
+    alt_versions:
+      graphmae2_gs:
+        encoder:
+          default: 'graphsage'
+  mvgrl:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 3000
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 0.001
+        type: float
+        description: Learning rate.
+      wd:
+        default: 0.0
+        type: float
+        description: Weight decay.
+      sample_size:
+        default: 2000
+        type: int
+        description: Sample size.
+      batch_size:
+        default: 4
+        type: int
+        description: Batch size.
+      patience:
+        default: 200
+        type: int
+        description: Early stopping patience.
+  greet:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 400
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 1e-3
+        type: float
+        description: Learning rate.
+      wd:
+        default: 0.
+        type: float
+        description: Weight decay.
+      dropout:
+        default: 0.5
+        type: float
+        description: Dropout
+      num_neighbours:
+        default: 20
+        type: int
+        description: Number of neighbours for K-NN graph
+      dfr1:
+        default: 0.1
+        type: float
+        description: edge drop out ratio.
+      dfr2:
+        default: 0.5
+        type: float
+        description: edge drop out ratio.
+      der1:
+        default: 0.5
+        type: float
+        description: edge drop out ratio.
+      der2:
+        default: 0.1
+        type: float
+        description: edge drop out ratio.
+      cl_rounds:
+        default: 2
+        type: int
+        description: Rounds before updating discriminator.
+      margin_hom:
+        default: 0.5
+        type: float
+        description: HOM margin
+      margin_het:
+        default: 0.5
+        type: float
+        description: HET margin
+      alpha:
+        default: 0.1
+        type: float
+        description: Alpha
+  spgcl:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 500
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 0.001
+        type: float
+        description: Learning rate.
+      wd:
+        default: 0.0001
+        type: float
+        description: Weight decay.
+      subg_num_hops:
+        default: 4
+        type: int
+        description: Num hops when extracting subgraph
+  dgi:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 100
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 1e-3
+        type: float
+        description: Learning rate.
+      wd:
+        default: 0.0
+        type: float
+        description: Weight decay.
+  gae:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      num_epochs:
+        default: 200
+        type: int
+        description: Number of training epochs
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      dimensions:
+        default: 512
+        type: int
+        description: Embedding dimension.
+      add_degree:
+        default: True
+        type: bool
+        description: Use the node degree features
+      add_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      standardize:
+        default: True
+        type: bool
+        description: Standardize the input attributes.
+      use_cpu:
+        default: False
+        type: bool
+        description: Force use CPU.
+      lr:
+        default: 1e-3
+        type: float
+        description: Learning rate.
+      wd:
+        default: 0.0
+        type: float
+        description: Weight decay.
+  sgcn:
+    modes:
+      directed: True
+      weighted: False
+      node_attributed: True
+    hyperparameters:
+      standardize:
+        default: True
+        type: bool
+        description: Standardize in input features
+      num_layers:
+        default: 2
+        type: int
+        description: Number of layers.
+      use_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      initialize_with_ones:
+        default: False
+        type: bool
+        description: Use unity features instead of degrees and lcc

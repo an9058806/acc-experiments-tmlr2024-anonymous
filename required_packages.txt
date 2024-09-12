@@ -1,0 +1,27 @@
+# Basic libraries
+graph-tool-base
+numpy
+scipy
+pandas
+scikit-learn
+pyyaml
+tqdm
+numba
+networkx
+cudatoolkit (If using GPU)
+tbb (Required for parallelization with numba)
+icc_rt (Optional, improves numba speed. Provided via the 'numba' channel using conda)
+
+# Deep learning libraries (install via pip)
+torch
+torch_geometric
+pyg_lib
+torch_scatter
+torch_sparse
+torch_cluster
+dgl
+
+# Optional for plotting
+matplotlib
+seaborn
+umap

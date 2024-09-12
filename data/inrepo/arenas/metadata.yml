@@ -1,0 +1,9 @@
+name: arenas
+graph_file: arenas_clean.edgelist
+file_info:
+  filetype: edgelist
+  comment_char: '%'
+graph_info:
+  num_nodes: 1133
+  weights: False
+  directed: False

@@ -1,0 +1,11 @@
+name: snap_patents
+graph_file: snap_patents.npz
+node_labels: multiclass
+node_labels_file: labels.json
+file_info:
+  filetype: npz
+graph_info:
+  num_nodes: 2923922
+  weights: False
+  directed: True
+  node_attributes: True

@@ -1,0 +1,10 @@
+name: enron_na
+graph_file: enron.npz
+file_info:
+  filetype: npz
+graph_info:
+  num_nodes: 7888
+  weights: True
+  directed: True
+  has_flow: True
+  weights_are_flow: True

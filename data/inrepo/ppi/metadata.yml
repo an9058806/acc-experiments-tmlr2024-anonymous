@@ -1,0 +1,10 @@
+name: ppi
+graph_file: ppi.npz
+node_labels: multilabel
+node_labels_file: labels.npy
+file_info:
+  filetype: npz
+graph_info:
+  num_nodes: 3890
+  weights: False
+  directed: False

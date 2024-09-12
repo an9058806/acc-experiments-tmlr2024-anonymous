@@ -1,0 +1,105 @@
+methods:
+  acc:
+    modes:
+      directed: True
+      weighted: True
+      node_attributed: True
+    hyperparameters:
+      max_steps:
+        default: 2
+        type: int
+        description: Maximum number of embedding expansion iterations (L)
+      normalization:
+        default: 'none'
+        type: str
+        description: Either 'sphere' or 'std'
+      subtract_mean:
+        default: True
+        type: bool
+        description: Centralize features in every step.
+      dtype32:
+        default: True
+        type: bool
+        description: Use single precision
+      use_degree:
+        default: True
+        type: bool
+        description: Use the degree as initial feature.
+      use_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      min_add_dim:
+        default: 2
+        type: int
+        description: Minimum number of dimensions of added aggregated features.
+      dimensions:
+        default: 512
+        type: int
+        description: Final embedding dimension.
+      sv_thresholding:
+        default: 'rtol'
+        type: str
+        description: Mode for determining the rank. Either 'none', 'tol', 'rtol', 'rank' or 'stwhp'.
+      theta:
+        default: 1e-8
+        type: float
+        description: Tolerance for determining rank.
+      return_us:
+        default: False
+        type: bool
+        description: Return U@S from rSVD rather than X @ Vh.t().
+      use_rsvd:
+        default: False
+        type: bool
+        description: Use randomized SVD instead of full SVD
+  pcapass:
+    modes:
+      directed: True
+      weighted: True
+      node_attributed: True
+    hyperparameters:
+      max_steps:
+        default: 2
+        type: int
+        description: Maximum number of embedding expansion iterations (L)
+      normalization:
+        default: 'none'
+        type: str
+        description: Either 'sphere' or 'std'
+      subtract_mean:
+        default: True
+        type: bool
+        description: Centralize features in every step.
+      dtype32:
+        default: True
+        type: bool
+        description: Use single precision
+      use_degree:
+        default: True
+        type: bool
+        description: Use the degree as initial feature.
+      use_lcc:
+        default: True
+        type: bool
+        description: Use the local clustering coefficient features
+      dimensions:
+        default: 512
+        type: int
+        description: Only used for svd and kmeans pruning methods. The maximum number of embeddings.
+      sv_thresholding:
+        default: 'none'
+        type: str
+        description: Mode for determining the rank. Either 'none', 'tol', 'rtol', 'rank' or 'stwhp'.
+      theta:
+        default: 0.0
+        type: float
+        description: Tolerance for determining rank.
+      return_us:
+        default: False
+        type: bool
+        description: Return U @ S from svd compression rather than X @ V.t()
+      use_rsvd:
+        default: False
+        type: bool
+        description: Use randomized SVD instead of full SVD
